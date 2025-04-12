@@ -4,13 +4,13 @@ This repository explores using Flow Matching to generate new human faces based o
 
 The training procedure for this particular flow matching model is as follows:
 
-1. **Require**: A dataset of samples $ z \sim p_{\text{data}} $, neural network $ u_t^\theta $
+1. **Require**: A dataset of samples $z \sim p_{\text{data}}$, neural network $u_t^\theta$
    
 2. **For each mini-batch of data**:
 
-   - Sample a data example $ z $ from the dataset.
-   - Sample a random time $ t \sim \text{Unif}_{[0,1]} $.
-   - Sample $ x \sim p_t(\cdot \mid z) $.
+   - Sample a data example $z$ from the dataset.
+   - Sample a random time $t \sim \text{Unif}_{[0,1]}$.
+   - Sample $x \sim p_t(\cdot \mid z)$.
 
 3. **Compute loss**:
 
