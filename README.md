@@ -14,9 +14,7 @@ The training procedure for this particular flow matching model is as follows:
 
 3. **Compute loss**:
 
-   $$
-   \mathcal{L}(\theta) = \left\| u_t^\theta(x) - u_t^{\text{target}}(x \mid z) \right\|^2
-   $$
+   $$\mathcal{L}(\theta) = \left\| u_t^\theta(x) - u_t^{\text{target}}(x \mid z) \right\|^2$$
 
 4. **Update model parameters** $ \theta $ via gradient descent on $\mathcal{L}(\theta) $.
 
