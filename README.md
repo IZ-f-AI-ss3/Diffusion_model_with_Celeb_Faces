@@ -1,11 +1,14 @@
-# Diffusion_model_with_Celeb_Faces
+# Flow Matching for Human Face Generation
+
 This repository explores using Flow Matching to generate new human faces based on the CelebFaces (CelebA) dataset.
+
+## Training Procedure
 
 The training procedure for this particular flow matching model is as follows:
 
 $$
 \begin{aligned}
-&\text{Flow Matching Training Procedure (General)} \\
+&\text{Algorithm 3: Flow Matching Training Procedure (General)} \\
 &\text{Require: A dataset of samples } z \sim p_{\text{data}}, \text{ neural network } u_t^\theta \\
 &\text{For each mini-batch of data:} \\
 &\quad \text{Sample a data example } z \text{ from the dataset.} \\
@@ -18,5 +21,5 @@ $$
 \end{aligned}
 $$
 
-Once we have learned a good \( u_t^\theta \), the next step to generate new samples that follow the \( p_{\text{data}} \) distribution is to simulate the solution of an ODE or an SDE. I will explain later the difference and commonalities between them.
+Once we have learned a good \( u_t^\theta \), the next step to generate new samples that follow the \( p_{\text{data}} \) distribution is to simulate the solution of an ODE or an SDE. However, in this repository, I will focus only on the ODE, even though they are equivalent in a certain sense (since we are in the conditional probability path and \( p_{\text{init}} \) is Gaussian, we already have a formula linking them).
 
